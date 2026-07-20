@@ -8,6 +8,7 @@ env:
   MONGODB_DB_NAME: gha-demo
 jobs:
   test:
+    environment: testing
     env: # TO learn more : https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-variables#default-environment-variables
       MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
